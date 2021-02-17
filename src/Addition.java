@@ -18,14 +18,18 @@ public class Addition extends Expression {
 
     /**
      * The value
+     * @return 
      */
+    @Override
     public int getValue() {
-        return 0; // Fix this in Exercise 1.
+        return left.getValue() + right.getValue(); // Fix this in Exercise 1.
     }
 
     /**
      * String representation in in-order notation
+     * @return 
      */
+    @Override
     public String toString() {
         return "(" + left.toString() + " + "
                 + right.toString() + ")";
