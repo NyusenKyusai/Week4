@@ -8,7 +8,7 @@
  *
  * @author Jonah
  */
-public class Division extends Expression {
+public class Subtraction extends Expression{
     /**
      * The expressions to be added.
      */
@@ -17,7 +17,7 @@ public class Division extends Expression {
     /**
      * Initialise left and right sides
      */
-    public Division(Expression l, Expression r) {
+    public Subtraction(Expression l, Expression r) {
 	left = l;
 	right = r;
     }
@@ -28,7 +28,7 @@ public class Division extends Expression {
      */
     @Override
     public int getValue() {
-	return left.getValue() / right.getValue(); // Fix this in Exercise 1.
+	return left.getValue() - right.getValue(); // Fix this in Exercise 1.
     }
     
     /**
@@ -37,7 +37,7 @@ public class Division extends Expression {
      */
     @Override
     public String toString() {
-	return "(" + left.toString() + " / " +
+	return "(" + left.toString() + " - " +
 	    right.toString() + ")";
     }
 }

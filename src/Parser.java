@@ -48,6 +48,12 @@ public class Parser {
             case '*':
                 op = Expression.MULTIPLICATION;
                 break;
+            case '/':
+                op = Expression.DIVISION;
+                break;
+            case '-':
+                op = Expression.SUBTRACTION;
+                break;
             default:
                 // There's no right hand side.
                 op = Expression.NONE;
@@ -67,6 +73,12 @@ public class Parser {
                 break;
             case Expression.MULTIPLICATION:
                 rootNode = new Multiplication(left, right);
+                break;
+            case Expression.DIVISION:
+                rootNode = new Division(left, right);
+                break;
+            case Expression.SUBTRACTION:
+                rootNode = new Subtraction(left, right);
                 break;
             default:
                 // do nothing: the expression we want is there already

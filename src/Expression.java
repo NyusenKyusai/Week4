@@ -16,4 +16,6 @@ public abstract class Expression {
     public static final int NONE = 0;
     public static final int ADDITION = 1;
     public static final int MULTIPLICATION = 2;
+    public static final int DIVISION = 3;
+    public static final int SUBTRACTION = 4;
 }
