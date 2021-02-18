@@ -34,4 +34,14 @@ public class Addition extends Expression {
         return "(" + left.toString() + " + "
                 + right.toString() + ")";
     }
+    
+    @Override
+    public String toPost() {
+        return "" + left.toPost() + " " + right.toPost() + " +";
+    }
+    
+    @Override
+    public String toPre() {
+        return "sum(" + left.toPre() + "," + right.toPre() + ")";
+    }
 }

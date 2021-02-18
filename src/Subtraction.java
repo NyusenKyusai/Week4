@@ -37,7 +37,17 @@ public class Subtraction extends Expression{
      */
     @Override
     public String toString() {
-	return "(" + left.toString() + " - " +
-	    right.toString() + ")";
+	return "(" + left.toString() + " - "
+                + right.toString() + ")";
+    }
+    
+    @Override
+    public String toPost() {
+        return "" + left.toPost() + " " + right.toPost() + " -";
+    }
+    
+    @Override
+    public String toPre() {
+        return "difference(" + left.toPre() + "," + right.toPre() + ")";
     }
 }

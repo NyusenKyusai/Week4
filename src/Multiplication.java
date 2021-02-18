@@ -31,7 +31,17 @@ public class Multiplication extends Expression {
      */
     @Override
     public String toString() {
-	return "(" + left.toString() + " * " +
-	    right.toString() + ")";
+	return "(" + left.toString() + " * "
+                + right.toString() + ")";
+    }
+    
+    @Override
+    public String toPost() {
+        return "" + left.toPost() + " " + right.toPost() + " *";
+    }
+    
+    @Override
+    public String toPre() {
+        return "product(" + left.toPre() + "," + right.toPre() + ")";
     }
 }

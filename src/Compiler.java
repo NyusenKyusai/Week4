@@ -53,6 +53,18 @@ public class Compiler {
 	System.out.print("In-order: ");
 	System.out.println(tree().toString());
     }
+    
+    public void printPostOrder() {
+        // require hasValidTree
+        System.out.print("Post-order: ");
+        System.out.println(tree().toPost());
+    }
+    
+    public void printPreOrder() {
+        // require hasValidTree
+        System.out.println("Pre-order: ");
+        System.out.println(tree().toPre());
+    }
    
     /**
      * Print the value of the expression.

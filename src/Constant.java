@@ -32,4 +32,14 @@ public class Constant extends Expression {
     public String toString() {
 	return String.valueOf(value);
     }
+    
+    @Override
+    public String toPost() {
+        return String.valueOf(value);
+    }
+    
+    @Override
+    public String toPre() {
+        return String.valueOf(value);
+    }
 }
