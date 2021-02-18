@@ -40,6 +40,12 @@ public class Calculator {
                     case 'i':
                         compiler.printInOrder();
                         break;
+                    case 'o':
+                        compiler.printPostOrder();
+                        break;
+                    case 'r':
+                        compiler.printPreOrder();
+                        break;
                     case 'v':
                         compiler.printValue();
                         break;
